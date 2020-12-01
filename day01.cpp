@@ -1,11 +1,10 @@
 //https://adventofcode.com/2020/day/1
 //https://github.com/DecafMegalodon/AOC2020CPP
+//Common functions between parts a and b for day 1
 
-
-#include <stdio.h>
-#include <iostream>
 #include <vector>
-#include "day01.h"
+#include <iostream>
+#include "day01.hpp"
 
 using namespace std;
 
@@ -17,9 +16,4 @@ vector<int>* GetInput() {
 		input_vector->push_back(input);
 	
 	return input_vector;
-}
-
-int main(int argc, char** argv) {
-	vector<int>* input = GetInput();
-	
 }
