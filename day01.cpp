@@ -4,6 +4,7 @@
 
 #include <vector>
 #include <iostream>
+#include <tuple>
 #include "day01.hpp"
 
 using namespace std;
@@ -16,4 +17,17 @@ vector<int>* GetInput() {
 		input_vector->push_back(input);
 	
 	return input_vector;
+}
+
+void FindSum(vector<int>* numbers, int sum, int* num1, int* num2) {
+	for(int outer = 0; outer < numbers->size(); outer++)
+	{
+		for(int inner = outer + 1; inner < numbers->size(); inner++){
+			if(numbers->at(outer) + numbers->at(inner) == sum){
+				*num1 = numbers->at(outer);
+				*num2 = numbers->at(inner);
+				return;
+			}
+		}
+	}
 }

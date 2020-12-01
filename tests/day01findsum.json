@@ -1,0 +1,25 @@
+{
+  "testFamilyName": "AOC 2020 Day 01 input reading",
+  "compilationFiles": [
+    "./tests/testcode/day01findSum.cpp",
+    "./day01.cpp"
+  ],
+  "tests": [
+	{
+		"testIdentifier": "Day 01 findSum simple",
+		"testInputType": "file",
+		"testInput": "./tests/inputs/day01sumsimple.txt",
+		"testOutputType": "simple",
+		"testOutput": "3",
+		"testLevel": 2
+	},
+	{
+		"testIdentifier": "Day 01 findSum harder",
+		"testInputType": "file",
+		"testInput": "./tests/inputs/day01sumharder.txt",
+		"testOutputType": "simple",
+		"testOutput": "3",
+		"testLevel": 2
+	}
+  ]
+}
