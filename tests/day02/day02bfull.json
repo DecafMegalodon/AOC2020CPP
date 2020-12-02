@@ -13,5 +13,9 @@
 		"testOutput": "272",
 		"testLevel": 0
 	}
+  ],
+  "test_targets": [
+    "day02",
+	"fullday"
   ]
 }

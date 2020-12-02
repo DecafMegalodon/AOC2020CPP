@@ -21,5 +21,8 @@
 		"testOutput": "15",
 		"testLevel": 2
 	}
+  ],
+  "test_targets": [
+    "day01"
   ]
 }

@@ -13,5 +13,9 @@
 		"testOutput": "./tests/inputs/day02.txt",
 		"testLevel": 2
 	}
+  ],
+  "test_targets": [
+    "day02",
+	"input"
   ]
 }
