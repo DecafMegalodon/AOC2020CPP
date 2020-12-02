@@ -13,9 +13,9 @@ struct Password_Info {
 	char* password;
 };
 
-vector<Password_Info>* ReadInput()
+vector<Password_Info*>* ReadInput()
 {
-	vector<Password_Info>* inputs = new vector<Password_Info>;
+	vector<Password_Info*>* inputs = new vector<Password_Info*>;
 	int min_repeats, max_repeats;
 	char repeat_letter;
 	char* passwordBuffer = new char[21];
@@ -27,6 +27,7 @@ vector<Password_Info>* ReadInput()
 		password_data->repeat_letter = repeat_letter;
 		password_data->password = passwordBuffer;
 		passwordBuffer = new char[21];
+		inputs->push_back(password_data);
 	}
 	delete passwordBuffer;
 	return inputs;
