@@ -1,6 +1,6 @@
 #include <vector>
 #include <iostream>
-#include "../../day01.hpp"
+#include "../../day01/day01.hpp"
 
 using namespace std;
 

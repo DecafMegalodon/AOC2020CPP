@@ -1,8 +1,8 @@
 {
   "testFamilyName": "AOC 2020 Day 02 full",
   "compilationFiles": [
-    "./day02.cpp",
-	"./day02b.cpp"
+    "./day02/day02.cpp",
+	"./day02/day02b.cpp"
   ],
   "tests": [
 	{

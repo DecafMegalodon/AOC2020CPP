@@ -1,4 +1,4 @@
 testCompiled
 a.out
 *.o
-cTest2.py
+*.py

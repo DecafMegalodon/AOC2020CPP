@@ -2,7 +2,7 @@
   "testFamilyName": "AOC 2020 Day 01 input reading",
   "compilationFiles": [
     "./tests/testcode/day01input.cpp",
-    "./day01.cpp"
+    "./day01/day01.cpp"
   ],
   "tests": [
 	{
