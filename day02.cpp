@@ -25,5 +25,13 @@ vector<Password_Info*>* ReadInput()
 	}
 	delete passwordBuffer;
 	return inputs;
-	
+}
+
+bool IsPasswordValid(Password_Info* data){
+	int num_matches = 0;
+	for(int offset = 0; offset < 20; ++offset){
+		if(data->password[offset] == data->repeat_letter)
+			++num_matches;
+	}
+	return (num_matches >= data->min_repeats && num_matches <= data->max_repeats);
 }

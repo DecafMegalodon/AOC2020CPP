@@ -13,4 +13,7 @@ struct Password_Info {
 };
 
 vector<Password_Info*>* ReadInput();
+bool IsPasswordValid(Password_Info*);
+bool IsPasswordValidV2(Password_Info*);
+
 #endif
