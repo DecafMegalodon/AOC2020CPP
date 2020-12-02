@@ -31,3 +31,18 @@ void FindSum(vector<int>* numbers, int sum, int* num1, int* num2) {
 		}
 	}
 }
+
+void FindSumThree(vector<int>* numbers, int sum, int* num1, int* num2, int* num3) {
+	for(int outer = 0; outer < numbers->size(); outer++){
+		for(int inner = outer + 1; inner < numbers->size(); inner++){
+			for(int innerer = inner + 1; innerer < numbers->size(); innerer++){
+				if(numbers->at(outer) + numbers->at(inner) + numbers->at(innerer) == sum){
+					*num1 = numbers->at(outer);
+					*num2 = numbers->at(inner);
+					*num3 = numbers->at(innerer);
+					return;
+				}
+			}
+		}
+	}
+}
