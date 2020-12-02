@@ -2,7 +2,6 @@
 //https://github.com/DecafMegalodon/AOC2020CPP
 
 
-#include <stdio.h>
 #include <iostream>
 #include <vector>
 #include "day01.hpp"
