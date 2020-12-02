@@ -7,7 +7,7 @@
 
 using namespace std;
 
-vector<Password_Info*>* ReadInput()
+vector<Password_Info*>* GetInput()
 {
 	vector<Password_Info*>* inputs = new vector<Password_Info*>;
 	int min_repeats, max_repeats;

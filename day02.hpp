@@ -12,7 +12,7 @@ struct Password_Info {
 	char* password;
 };
 
-vector<Password_Info*>* ReadInput();
+vector<Password_Info*>* GetInput();
 bool IsPasswordValid(Password_Info*);
 bool IsPasswordValidV2(Password_Info*);
 

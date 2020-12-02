@@ -6,7 +6,7 @@ using namespace std;
 
 int main() {
 
-	vector<Password_Info*>* input = ReadInput();
+	vector<Password_Info*>* input = GetInput();
 
 	for(int i = 0; i < input->size(); ++i) {
 		Password_Info* cur = input->at(i);
