@@ -35,3 +35,11 @@ bool IsPasswordValid(Password_Info* data){
 	}
 	return (num_matches >= data->min_repeats && num_matches <= data->max_repeats);
 }
+
+//returns true if exactly one of password[min_repeats] or password[max_repeats] matches the required character
+//We should probably be checking if the min/max are within the password to avoid unexpected reads
+//Passwords are 1 indexed
+bool IsPasswordValidV2(Password_Info* data){
+	return (data->password[data->min_repeats - 1] == data->repeat_letter) ^ 
+	                       (data->password[data->max_repeats - 1] == data->repeat_letter);
+}
