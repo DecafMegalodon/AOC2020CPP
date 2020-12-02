@@ -3,15 +3,9 @@
 
 #include <vector>
 #include <iostream>
+#include "day02.hpp"
 
 using namespace std;
-
-struct Password_Info {
-	int min_repeats;
-	int max_repeats;
-	char repeat_letter;
-	char* password;
-};
 
 vector<Password_Info*>* ReadInput()
 {
