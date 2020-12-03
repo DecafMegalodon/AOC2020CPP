@@ -1,16 +1,16 @@
 {
-  "testFamilyName": "AOC 2020 Day 03a full",
+  "testFamilyName": "AOC 2020 Day 03b full",
   "compilationFiles": [
-    "./day03/day03a.cpp",
+    "./day03/day03b.cpp",
     "./day03/day03.cpp"
   ],
   "tests": [
 	{
-		"testIdentifier": "Day 03 input",
+		"testIdentifier": "Day 03b full",
 		"testInputType": "file",
 		"testInput": "./tests/inputs/day03.txt",
 		"testOutputType": "simple",
-		"testOutput": "Unknown",
+		"testOutput": "2421944712",
 		"testLevel": 0
 	}
   ],

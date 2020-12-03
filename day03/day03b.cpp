@@ -6,8 +6,13 @@
 using namespace std;
 
 int main(){
+	long answer = 1;
 	Slope* input = GetInput();
-	int collisions = CountCollisions(input, 1, 3);
-	cout << collisions << endl;
+	answer *= CountCollisions(input, 1, 1);
+	answer *= CountCollisions(input, 1, 3);
+	answer *= CountCollisions(input, 1, 5);
+	answer *= CountCollisions(input, 1, 7);
+	answer *= CountCollisions(input, 2, 1);
+	cout << answer << endl;
 	return 0;
 }
