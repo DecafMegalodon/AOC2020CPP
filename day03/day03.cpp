@@ -23,3 +23,15 @@ Slope* GetInput(){
 	delete input_line;
 	return input;
 }
+
+int CountCollisions(Slope* slope, int dY, int dX){
+	int cur_collisions = 0;
+	int cur_y = 0;
+	int cur_x = 0;
+	while(cur_y < slope->size()){
+		cur_collisions += slope-> at(cur_y) -> test(cur_x % kSlopeWidth);
+		cur_y += dY;
+		cur_x += dX;
+	}
+	return cur_collisions;
+}

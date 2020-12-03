@@ -14,5 +14,6 @@ typedef bitset<kSlopeWidth> SlopeLine;
 typedef vector<SlopeLine*> Slope;
 
 Slope* GetInput();
+int CountCollisions(Slope*, int, int);
 
 #endif
