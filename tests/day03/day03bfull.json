@@ -10,7 +10,7 @@
 		"testInputType": "file",
 		"testInput": "./tests/inputs/day03.txt",
 		"testOutputType": "simple",
-		"testOutput": "153",
+		"testOutput": "Unknown",
 		"testLevel": 0
 	}
   ],
