@@ -9,9 +9,9 @@
 
 using namespace std;
 
-#define SLOPEWIDTH 31 //For scanf length
-const int kSlopeWidth = SLOPEWIDTH; //For everything else
-typedef vector<bitset<kSlopeWidth>*> Slope;
+const int kSlopeWidth = 31;
+typedef bitset<kSlopeWidth> SlopeLine;
+typedef vector<SlopeLine*> Slope;
 
 Slope* GetInput();
 

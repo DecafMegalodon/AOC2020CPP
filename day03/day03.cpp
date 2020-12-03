@@ -7,7 +7,7 @@ using namespace std;
 
 Slope* GetInput(){
 	Slope* input = new Slope;
-	bitset<kSlopeWidth>* slope_line = new bitset<kSlopeWidth>(0);
+	SlopeLine* slope_line = new SlopeLine(0);
 	char* input_line = new char[kSlopeWidth];
 	
 	//Todo: Remove string length hardcode
