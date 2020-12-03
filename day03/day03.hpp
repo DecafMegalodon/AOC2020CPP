@@ -5,9 +5,13 @@
 #define day_03_hpp_
 
 #include <vector>
+#include <bitset>
 
 using namespace std;
 
 const int kSlopeWidth = 31;
+typedef vector<bitset<kSlopeWidth>> Slope;
+
+Slope* GetInput();
 
 #endif
