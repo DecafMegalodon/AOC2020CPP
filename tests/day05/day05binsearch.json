@@ -1,0 +1,20 @@
+{
+  "testFamilyName": "AOC 2020 Day 05 binary partitioning",
+  "compilationFiles": [
+    "./tests/testcode/day05partition.cpp",
+    "./day05/day05.cpp"
+  ],
+  "tests": [
+	{
+		"testIdentifier": "AOC 2020 Day 05 binary partitioning",
+		"testInputType": "simple",
+		"testInput": "",
+		"testOutputType": "simple",
+		"testOutput": "79",
+		"testLevel": 2
+	}
+  ],
+  "test_targets": [
+    "day05"
+  ]
+}
