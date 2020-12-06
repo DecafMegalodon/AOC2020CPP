@@ -6,11 +6,19 @@
   ],
   "tests": [
 	{
-		"testIdentifier": "AOC 2020 Day 05 binary partitioning",
+		"testIdentifier": "AOC 2020 Day 05 binary partitioning 1",
 		"testInputType": "simple",
-		"testInput": "",
+		"testInput": "FBFBBFF 0 128",
 		"testOutputType": "simple",
-		"testOutput": "79",
+		"testOutput": "44",
+		"testLevel": 2
+	},
+	{
+		"testIdentifier": "AOC 2020 Day 05 binary partitioning 2",
+		"testInputType": "simple",
+		"testInput": "RLR 0 8",
+		"testOutputType": "simple",
+		"testOutput": "5",
 		"testLevel": 2
 	}
   ],
