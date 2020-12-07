@@ -1,0 +1,20 @@
+{
+  "testFamilyName": "AOC 2020 Day 05 GetSeatID()",
+  "compilationFiles": [
+    "./tests/testcode/day05seatID.cpp",
+    "./day05/day05.cpp"
+  ],
+  "tests": [
+	{
+		"testIdentifier": "AOC 2020 Day 05 GetSeatID()",
+		"testInputType": "simple",
+		"testInput": "FBFBBFFRLR",
+		"testOutputType": "simple",
+		"testOutput": "357",
+		"testLevel": 2
+	}
+  ],
+  "test_targets": [
+    "day05"
+  ]
+}

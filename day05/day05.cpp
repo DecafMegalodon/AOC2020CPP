@@ -2,7 +2,7 @@
 //https://github.com/DecafMegalodon/AOC2020CPP
 
 #include <iostream>
-#include <tuple>
+#include <cstring> // strncpy
 #include "day05.hpp"
 
 using namespace std;
@@ -23,6 +23,16 @@ int PartSearch(char* part_string, int start, int size){
 			exit(-2);
 		}
 	}
+}
+
+int GetSeatID(char* part_string){
+	char* row = new char[8];
+	row[7] = '\0';
+	char* col = new char[4];
+	col[3] = '\0';
+	strncpy(row, part_string, 7);
+	strncpy(col, part_string+7, 3);
+	return 8*PartSearch(row, 0, 128) + PartSearch(col, 0, 8);
 }
 
 vector<char*>* GetInput(){

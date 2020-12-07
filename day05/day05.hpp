@@ -5,7 +5,6 @@
 #define day_05_hpp_
 
 #include <vector>
-#include <tuple>
 
 /*Takes a null-terminated character array `part_string`,
 a `start` of consecutive integers through which to consider
@@ -16,6 +15,7 @@ A non 2^n size array is not supported. Behavior in such a case is undefined
 */
 int PartSearch(char* part_string, int start, int size);
 
+int GetSeatID(char*);
 std::vector<char*>* GetInput();
 
 #endif
