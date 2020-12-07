@@ -7,8 +7,6 @@
 #include <vector>
 #include <tuple>
 
-typedef std::tuple<char*, char*> BoardingOrder;
-
 /*Takes a null-terminated character array `part_string`,
 a `start` of consecutive integers through which to consider
 and the `size` of the run of intergers
@@ -18,6 +16,6 @@ A non 2^n size array is not supported. Behavior in such a case is undefined
 */
 int PartSearch(char* part_string, int start, int size);
 
-std::vector<BoardingOrder*>* GetInput();
+std::vector<char*>* GetInput();
 
 #endif

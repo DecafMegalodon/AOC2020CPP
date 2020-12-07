@@ -6,6 +6,6 @@
 using namespace std;
 
 int main(){
-	vector<BoardingOrder*> inputs = GetInput();
+	vector<char*> inputs = GetInput();
 	
 }

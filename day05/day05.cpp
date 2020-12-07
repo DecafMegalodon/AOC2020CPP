@@ -25,23 +25,13 @@ int PartSearch(char* part_string, int start, int size){
 	}
 }
 
-vector<BoardingOrder*>* GetInput(){
-	vector<BoardingOrder*>* inputs = new vector<BoardingOrder*>;
-	BoardingOrder* b_ord;
-	char* row_parts = new char[8];  // Include space for null terminator
-	char* col_parts = new char[4];
-	while(scanf("%7s%3s\n", row_parts, col_parts) != EOF) {
-		// cout << row_parts << "and" << col_parts << endl;
-		b_ord = new BoardingOrder(row_parts, col_parts);
-		cout << get<0>(*b_ord) << endl;
-		cout << get<1>(*b_ord) << endl;
-		inputs->push_back(b_ord);
-		char* row_parts = new char[8];
-		char* col_parts = new char[4];
+vector<char*>* GetInput(){
+	vector<char*>* inputs = new vector<char*>;
+	char* char_buff = new char[11];
+	while(scanf("%s", char_buff) != EOF){
+		//cout << char_buff << endl;
+		inputs -> push_back ( char_buff );
+		char_buff = new char[11];
 	}
-	
-	delete row_parts;  // Guranteed to not delete data stored in part of inputs
-	delete col_parts;
-	
 	return inputs;
 }
