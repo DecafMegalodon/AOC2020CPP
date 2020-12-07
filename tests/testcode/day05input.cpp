@@ -12,7 +12,6 @@ int main(){
 	col[3] = '\0';
 	for(int i = 0; i < input->size(); i++){
 		char* b_pass = input->at(i);
-		//cout << b_pass << endl;
 		strncpy(row, b_pass, 7);
 		strncpy(col, b_pass+7, 3);
 		cout << row  << col << endl;

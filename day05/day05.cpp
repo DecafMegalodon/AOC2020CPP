@@ -29,9 +29,9 @@ vector<char*>* GetInput(){
 	vector<char*>* inputs = new vector<char*>;
 	char* char_buff = new char[11];
 	while(scanf("%s", char_buff) != EOF){
-		//cout << char_buff << endl;
 		inputs -> push_back ( char_buff );
 		char_buff = new char[11];
 	}
+	delete[] char_buff;
 	return inputs;
 }
