@@ -2,6 +2,8 @@
 //https://github.com/DecafMegalodon/AOC2020CPP
 
 #include <iostream>
+#include <tuple>
+#include "day05.hpp"
 
 using namespace std;
 
@@ -21,4 +23,22 @@ int PartSearch(char* part_string, int start, int size){
 			exit(-2);
 		}
 	}
+}
+
+vector<BoardingOrder*>* GetInput(){
+	vector<BoardingOrder*>* inputs = new vector<BoardingOrder*>;
+	BoardingOrder* b_ord;
+	char* row_parts = new char[8];  // Include space for null terminator
+	char* col_parts = new char[4];
+	while(scanf("%7s%3s\n", row_parts, col_parts) != EOF) {
+		b_ord = new BoardingOrder(row_parts, col_parts);
+		inputs->push_back(b_ord);
+		char* row_parts = new char[8];
+		char* col_parts = new char[4];
+	}
+	
+	delete row_parts;  // Guranteed to not delete data stored in part of inputs
+	delete col_parts;
+	
+	return inputs;
 }
