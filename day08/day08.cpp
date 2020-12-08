@@ -32,27 +32,32 @@ vector<Instruction*>* GetInput(){
 
 //Return the value of the accum(ulator) right before an instruction is
 //executed a second time
+//Returns 0 and prints the accum if the program successfully terminates
 int RunVM(vector<Instruction*>* program){
 	int pc = 0;  //Program counter
 	int accum = 0;  //Accumulator
 	Instruction* cur_instr;
 	
 	while(1){
-		//Todo: Check for end of program
+		if(pc >= program->size()){ // Did the program terminate?
+			cout << accum << endl;
+			return 0;
+		}
+		
 		cur_instr = program->at(pc);
 		
 		cur_instr->run_num += 1;
-		if(cur_instr->run_num > 1)
+		if(cur_instr->run_num > 1) // Have we already encountered this instruction?
 			return accum;
 		
 		switch(cur_instr->opcode){
-			case kNOP:
+			case kNOP:  // NOOP
 				pc += 1;
 				break;
-			case kJMP:
+			case kJMP:  // Jump
 				pc += cur_instr->opdata;
 				break;
-			case kACC:
+			case kACC:  // Inc/Dec the accumulator
 				accum += cur_instr->opdata;
 				pc += 1;
 				break;
