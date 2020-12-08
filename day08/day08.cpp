@@ -29,3 +29,38 @@ vector<Instruction*>* GetInput(){
 	delete instr_buf;
 	return instructions;
 }
+
+//Return the value of the accum(ulator) right before an instruction is
+//executed a second time
+int RunVM(vector<Instruction*>* program){
+	int pc;  //Program counter
+	int accum = 0;  //Accumulator
+	Instruction* cur_instr;
+	
+	while(1){
+		//Todo: Check for end of program
+		cur_instr = program->at(pc);
+		
+		cur_instr->run_num += 1;
+		if(cur_instr->run_num > 1)
+			return accum;
+		
+		switch(cur_instr->opcode){
+			case kNOP:
+				pc += 1;
+				break;
+			case kJMP:
+				pc += cur_instr->opdata;
+				break;
+			case kACC:
+				accum += cur_instr->opdata;
+				pc += 1;
+				break;
+			default:
+				cout << "INVALID OPERATION: " << cur_instr->opcode << endl;
+				exit(-1);
+		}
+	}
+	
+	
+}

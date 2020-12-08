@@ -1,0 +1,20 @@
+{
+  "testFamilyName": "AOC 2020 Day 08a full",
+  "compilationFiles": [
+    "./day08/day08a.cpp",
+    "./day08/day08.cpp"
+  ],
+  "tests": [
+	{
+		"testIdentifier": "Day 08a full simple",
+		"testInputType": "file",
+		"testInput": "./tests/inputs/day08simple.txt",
+		"testOutputType": "simple",
+		"testOutput": "5",
+		"testLevel": 1
+	}
+  ],
+  "test_targets": [
+    "day08"
+  ]
+}

@@ -23,5 +23,6 @@ struct Instruction{
 };
 
 std::vector<Instruction*>* GetInput();
+int RunVM(std::vector<Instruction*>*);
 
 #endif
