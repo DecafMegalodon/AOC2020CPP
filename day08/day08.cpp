@@ -33,7 +33,7 @@ vector<Instruction*>* GetInput(){
 //Return the value of the accum(ulator) right before an instruction is
 //executed a second time
 int RunVM(vector<Instruction*>* program){
-	int pc;  //Program counter
+	int pc = 0;  //Program counter
 	int accum = 0;  //Accumulator
 	Instruction* cur_instr;
 	
