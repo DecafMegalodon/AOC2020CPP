@@ -7,17 +7,6 @@
 
 using namespace std;
 
-struct Instruction{
-	int opcode;
-	int opdata;
-	int run_num = 0;
-	
-	Instruction(int op, int data){
-		opcode = op;
-		opdata = data;
-	}
-};
-
 //Reads the sequences of opcodes for the virtual processor to run
 vector<Instruction*>* GetInput(){
 	vector<Instruction*>* instructions = new vector<Instruction*>;
@@ -26,11 +15,11 @@ vector<Instruction*>* GetInput(){
 	int opcode;
 	
 	while(scanf("%3s %d", instr_buf, &instr_data) != EOF){
-		if(strncmp(instr_buf, "NOP", 3) == 0)
+		if(strncmp(instr_buf, "nop", 3) == 0)
 			opcode = kNOP;
-		else if(strncmp(instr_buf, "JMP", 3) == 0)
+		else if(strncmp(instr_buf, "jmp", 3) == 0)
 			opcode = kJMP;
-		else if(strncmp(instr_buf, "ACC", 3) == 0)
+		else if(strncmp(instr_buf, "acc", 3) == 0)
 			opcode = kACC;
 			
 		instructions->push_back(new Instruction(opcode, instr_data));

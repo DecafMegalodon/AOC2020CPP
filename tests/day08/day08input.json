@@ -1,5 +1,5 @@
 {
-  "testFamilyName": "AOC 2020 Day 03 input reading",
+  "testFamilyName": "AOC 2020 Day 08 input reading",
   "compilationFiles": [
     "./tests/testcode/day08input.cpp",
     "./day08/day08.cpp"
