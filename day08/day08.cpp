@@ -41,7 +41,7 @@ int RunVM(vector<Instruction*>* program){
 	while(1){
 		if(pc >= program->size()){ // Did the program terminate?
 			cout << accum << endl;
-			return 0;
+			return kFinished;
 		}
 		
 		cur_instr = program->at(pc);

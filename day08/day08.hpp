@@ -11,6 +11,9 @@ const int kNOP = 0;
 const int kJMP = 1;
 const int kACC = 2;
 
+//"magic" number to indicate the program successfully reached the end
+const int kFinished = -90210;
+
 struct Instruction{
 	int opcode;
 	int opdata;
