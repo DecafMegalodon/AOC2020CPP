@@ -3,6 +3,8 @@
 
 #include <iostream>
 #include <vector>
+#include <algorithm>  //Sort
+#include <cstring>  //memcpy
 #include "day09.hpp"
 
 using namespace std;
@@ -47,4 +49,27 @@ long FindFault(vector<long>* numbers, int preamble_len){
 	}
 	//Todo: Catch if an answer isn't found
 	return -1;
+}
+
+long FindWeakness(vector<long>* numbers, long fault){
+	long* data = numbers->data();
+	long cur_sum = 0;
+	int weak_start;
+	int weak_len;
+	for(weak_start = 0; weak_start < numbers->size(); weak_start++){
+		for(weak_len = 1; weak_len < (numbers->size() - weak_start); weak_len++){
+			cur_sum += data[weak_start + weak_len - 1];
+			if(cur_sum >= fault)
+				break;
+		}
+		if(cur_sum == fault)
+			break;
+		cur_sum = 0;
+	}
+	long* weak_array = new long[weak_len];
+	memcpy(weak_array, data + weak_start , sizeof(long)*weak_len);
+	sort(weak_array, weak_array+weak_len);
+	long weakness = weak_array[0] + weak_array[weak_len-1];
+	delete weak_array;
+	return weakness;
 }

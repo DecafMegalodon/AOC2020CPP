@@ -11,6 +11,7 @@ int main(){
 	const int kPreamble = 25;
 	vector<long>* vect_input = GetInput();
 	long fault = FindFault(vect_input, kPreamble);
-	cout << fault << endl;
+	long weakness = FindWeakness(vect_input, fault);
+	cout << weakness << endl;
 	return 0;
 }
