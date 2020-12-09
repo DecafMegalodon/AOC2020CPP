@@ -6,6 +6,6 @@ using namespace std;
 int main(){
 	vector<long>* input = GetInput();
 	for(int i = 5; i < input->size(); i++){
-		cout << Check_Sums(input->data(), 5, input->at(i)) << endl; 
+		cout << Check_Sums(input->data()+(i-5), 5, input->at(i)) << endl; 
 	}
 }

@@ -7,5 +7,7 @@
 #include <vector>
 
 std::vector<long>* GetInput();
+//long Check_Sums(long[] numbers, int preamble_len, long summable);
+long Check_Sums(long*, int, long);
 	
 #endif
