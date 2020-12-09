@@ -1,0 +1,20 @@
+{
+  "testFamilyName": "AOC 2020 Day 09 sum checking",
+  "compilationFiles": [
+    "./tests/testcode/day09/day09Check_Sums.cpp",
+    "./day09/day09.cpp"
+  ],
+  "tests": [
+	{
+		"testIdentifier": "Day 09 Check_Sums",
+		"testInputType": "file",
+		"testInput": "./tests/inputs/day09example.txt",
+		"testOutputType": "file",
+		"testOutput": "./tests/outputs/day09Check_Sums.txt",
+		"testLevel": 2
+	}
+  ],
+  "test_targets": [
+    "day09"
+  ]
+}
