@@ -33,3 +33,18 @@ long Check_Sums(long* numbers, int preamble_len, long summable){
 	}
 	return summable; //Couldn't find a pair that summed to it
 }
+
+//Find the first number that can't be summed in the `preamble` numbers
+long FindFault(vector<long>* numbers, int preamble_len){
+	long* input = numbers->data();
+	long result;
+	for(int i = preamble_len; i < numbers->size(); i++){
+		result = Check_Sums(input+(i-preamble_len),
+					preamble_len,
+					input[i]);
+		if(result != 0)
+			return(result);
+	}
+	//Todo: Catch if an answer isn't found
+	return -1;
+}

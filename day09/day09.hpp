@@ -9,5 +9,7 @@
 std::vector<long>* GetInput();
 //long Check_Sums(long[] numbers, int preamble_len, long summable);
 long Check_Sums(long*, int, long);
+//long FindFault(vector<long>* numbers, int preamble_len)
+long FindFault(std::vector<long>*, int);
 	
 #endif
