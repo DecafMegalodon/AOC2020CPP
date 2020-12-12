@@ -16,3 +16,25 @@ vector<NavInstr*>* GetInput(){
 	}
 	return input;
 }
+
+void SailBoat(BoatState* boat, vector<NavInstr*>* instructions){
+	NavInstr* instr;
+	for(int i = 0; i < instructions->size(); i++){
+		instr = instructions->at(i);
+		switch(instr->instruction){
+			case 'E':
+			case 'S':
+			case 'W':
+			case 'N':
+				boat->DriftDirection(instr->instruction, instr->distance);
+				break;
+			case 'L':
+			case 'R':
+				boat->Turn(instr->instruction, instr->distance);
+				break;
+			case 'F':
+				boat->SailForward(instr->distance);
+				break;
+		}
+	}
+}

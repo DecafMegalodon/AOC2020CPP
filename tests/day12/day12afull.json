@@ -1,0 +1,28 @@
+{
+  "testFamilyName": "AOC 2020 Day 12a full",
+  "compilationFiles": [
+    "./day12/day12a.cpp",
+    "./day12/day12.cpp"
+  ],
+  "tests": [
+	{
+		"testIdentifier": "Day 12a full simple",
+		"testInputType": "file",
+		"testInput": "./tests/inputs/day12simple.txt",
+		"testOutputType": "simple",
+		"testOutput": "25",
+		"testLevel": 1
+	},
+	{
+		"testIdentifier": "Day 12a full",
+		"testInputType": "file",
+		"testInput": "./tests/inputs/day12.txt",
+		"testOutputType": "simple",
+		"testOutput": "UNKNOWN",
+		"testLevel": 0
+	}
+  ],
+  "test_targets": [
+    "day12"
+  ]
+}

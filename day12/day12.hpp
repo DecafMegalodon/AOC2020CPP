@@ -5,6 +5,9 @@
 #define day_12_hpp_
 
 #include <vector>
+#include "boatstate.hpp"
+
+using namespace std;
 
 struct NavInstr{
 	char instruction;
@@ -15,7 +18,8 @@ struct NavInstr{
 	}
 };
 
-std::vector<NavInstr*>* GetInput();
+vector<NavInstr*>* GetInput();
+void SailBoat(BoatState*, vector<NavInstr*>*);
 
 
 #endif
