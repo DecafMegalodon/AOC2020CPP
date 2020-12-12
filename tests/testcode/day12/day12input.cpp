@@ -1,4 +1,5 @@
 #include <iostream>
+#include <vector>
 #include "../../../day12/day12.hpp"
 
 using namespace std;
