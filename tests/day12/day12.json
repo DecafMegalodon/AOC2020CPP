@@ -1,0 +1,21 @@
+{
+  "testFamilyName": "AOC 2020 Day 12 input reading",
+  "compilationFiles": [
+    "./tests/testcode/day12/day12input.cpp",
+    "./day12/day12.cpp"
+  ],
+  "tests": [
+	{
+		"testIdentifier": "Day 12 input",
+		"testInputType": "file",
+		"testInput": "./tests/inputs/day12.txt",
+		"testOutputType": "file",
+		"testOutput": "./tests/inputs/day12.txt",
+		"testLevel": 2
+	}
+  ],
+  "test_targets": [
+    "day12",
+	"input"
+  ]
+}
