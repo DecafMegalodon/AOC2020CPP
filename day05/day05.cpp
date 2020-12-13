@@ -4,6 +4,7 @@
 #include <iostream>
 #include <cstring> // strncpy
 #include "day05.hpp"
+#include <algorithm> // sort
 
 using namespace std;
 
@@ -33,6 +34,19 @@ int GetSeatID(char* part_string){
 	strncpy(row, part_string, 7);
 	strncpy(col, part_string+7, 3);
 	return 8*PartSearch(row, 0, 128) + PartSearch(col, 0, 8);
+}
+
+int* ConvertPartitionsToSeatIDs(vector<char*>* partitions)
+{
+	int num_partitions = partitions->size();
+	int* seat_IDs = new int[num_partitions];
+	
+	for(int i = 0; i < num_partitions; i++)
+		seat_IDs[i] = GetSeatID(partitions->at(i));
+	
+	sort(seat_IDs, seat_IDs + num_partitions);
+	return seat_IDs;
+	//680 too low
 }
 
 vector<char*>* GetInput(){

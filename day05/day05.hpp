@@ -16,6 +16,7 @@ A non 2^n size array is not supported. Behavior in such a case is undefined
 int PartSearch(char* part_string, int start, int size);
 
 int GetSeatID(char*);
+int* ConvertPartitionsToSeatIDs(std::vector<char*>*);
 std::vector<char*>* GetInput();
 
 #endif
