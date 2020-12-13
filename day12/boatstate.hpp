@@ -50,7 +50,8 @@ class BoatState{
 	//A heading of 0 indicates eastward. Increased heading turns clockwise
 	void Turn(char direction, int magnitude){
 		int mag_mod = (direction == 'L' ? -1 : 1);
-		heading_ = (360 + (magnitude * mag_mod)) % 360;
+		heading_ = (360 + heading_ + (magnitude * mag_mod)) % 360;
+		//std::cout << direction << magnitude << ' ' << mag_mod << ' ' << heading_ << std::endl;
 		switch(heading_){
 			case 0:
 				y_vector_ = 0;
