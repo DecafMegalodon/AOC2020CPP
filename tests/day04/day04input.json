@@ -1,0 +1,21 @@
+{
+  "testFamilyName": "AOC 2020 Day 04 input reading",
+  "compilationFiles": [
+    "./tests/testcode/day04input.cpp",
+    "./day04/day04.cpp"
+  ],
+  "tests": [
+	{
+		"testIdentifier": "Day 04 input",
+		"testInputType": "file",
+		"testInput": "./tests/inputs/day04small.txt",
+		"testOutputType": "file",
+		"testOutput": "./tests/inputs/day04small.txt",
+		"testLevel": 2
+	}
+  ],
+  "test_targets": [
+    "day04",
+	"input"
+  ]
+}
