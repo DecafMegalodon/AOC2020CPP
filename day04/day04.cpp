@@ -3,27 +3,29 @@
 
 #include <vector>
 #include <iostream>
+#include <cstring>
 #include "day04.hpp"
 
 using namespace std;
 
 vector<Passport*>* GetInput(){
 	vector<Passport*>* input = new vector<Passport*>;
+	char linebuffer[255];
 	char key[4];
 	char data[41];
 	int read_result = 0;
 	
 	while(true){
-		read_result = scanf("%3s:%40s ", key, data);
-		cout << key << '@' << data << "RR:" << read_result << endl;
-		if(read_result == EOF)
+		fgets(linebuffer, 255, stdin);
+		
+		if(feof(stdin))  //We're read all of the input
 			break;
-		if(read_result != 2){
-			cout << "NEWPASSPORT!\n";
+			
+		if(strlen(linebuffer) == 2){  //If it's only new
+			cout << "NEW PASSPORT!" << endl;
+			continue;
 		}
-		
-		
-		
+		cout << strlen(linebuffer) << linebuffer;
 	}
 	
 	return input;
