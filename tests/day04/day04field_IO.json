@@ -1,0 +1,20 @@
+{
+  "testFamilyName": "AOC 2020 Day 04 field I/O",
+  "compilationFiles": [
+    "./tests/testcode/day04/day04get_field.cpp",
+    "./day04/day04.cpp"
+  ],
+  "tests": [
+	{
+		"testIdentifier": "Day 04 field I/O",
+		"testInputType": "simple",
+		"testInput": "",
+		"testOutputType": "simple",
+		"testOutput": "TEST DATA",
+		"testLevel": 2
+	}
+  ],
+  "test_targets": [
+    "day04"
+  ]
+}

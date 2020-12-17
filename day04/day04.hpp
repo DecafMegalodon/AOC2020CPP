@@ -32,7 +32,7 @@ class Passport{
 			return data_->at(field);
 		}
 		catch (std::out_of_range& oor){  //Not present in passport
-			return new string("UH OH! Stinky!");	
+			return NULL;	
 		}
 	}
 	
@@ -45,6 +45,12 @@ class Passport{
 	//Returns the result of the check
 	bool UpdateFieldValidity(){
 		vector<string> required_fields = {"byr", "iyr", "eyr", "hgt", "hcl", "ecl", "pid"};
+		for(auto field: required_fields){
+			if(GetField(field) == NULL){
+				valid_ = false;
+				return false;
+			}
+		}
 		return true;
 	}
 	
