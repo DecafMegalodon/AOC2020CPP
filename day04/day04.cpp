@@ -18,14 +18,10 @@ vector<Passport*>* GetInput(){
 	int read_result = 0;
 	
 	while(true){
+		fill(linebuffer, linebuffer+254, 0);
 		fgets(linebuffer, 255, stdin);
-		
-		if(feof(stdin)){  //We're read all of the input
-			input->push_back(cur_pass);
-			break;
-		}
 			
-		if(strlen(linebuffer) == 1){  //If it's only \n and ???
+		if(strlen(linebuffer) == 1){  //Todo: This is sometimes inconsistent. CRLF vs CR vs LF suspected
 			//cout << "NEW PASSPORT!" << endl;
 			input->push_back(cur_pass);
 			cur_pass = new Passport();
@@ -38,8 +34,16 @@ vector<Passport*>* GetInput(){
 			cur_pass->Append(new string(key), new string(data));
 			buff_pos += (3 + 1 + strlen(data) + 1); //LBL + : + DATAHERE + ' '
 		}
+		
+		if(feof(stdin)){  //We're read all of the input
+			//cout << "FINAL PASSPORT" << endl;
+			input->push_back(cur_pass);
+			break;
+		}
+		
 		buff_pos = linebuffer;
+		
+		
 	}
-	delete cur_pass;
 	return input;
 }
