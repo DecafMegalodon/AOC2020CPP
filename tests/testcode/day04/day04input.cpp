@@ -10,7 +10,7 @@ int main(){
 	for(auto passport: *input){  //For passport in input...
 		//cout << passport->data_->size() << endl;
 		for(auto field: *passport->data_){  //For data pair in the passport...
-			cout << field.first->c_str() << ':' << field.second->c_str() << ' ';
+			cout << field.first.c_str() << ':' << field.second->c_str() << ' ';
 		}
 		cout << endl;
 	}

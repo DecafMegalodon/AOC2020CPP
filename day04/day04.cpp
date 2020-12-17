@@ -29,7 +29,7 @@ vector<Passport*>* GetInput(){
 		
 		//Process passport info
 		while(sscanf(buff_pos, "%3s:%40s ", key, data) != EOF){
-			cur_pass->Append(new string(key), new string(data));
+			cur_pass->Define(key, new string(data));
 			buff_pos += (3 + 1 + strlen(data) + 1); //LBL + : + DATAHERE + ' '
 		}
 		

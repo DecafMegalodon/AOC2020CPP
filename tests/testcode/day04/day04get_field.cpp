@@ -6,8 +6,7 @@
 using namespace std;
 
 int main(){
-	vector<Passport*>* input = GetInput();
-	string* ecl = new string("ecl");
-	input->at(0)->data_->emplace(ecl, new string("Potat"));
-	cout << input->at(0)->GetField(ecl)->c_str() << endl;
+	Passport* pass = new Passport();
+	pass->Define("ecl", new string("TEST DATA"));
+	cout << pass->GetField("ecl")->c_str() << endl;
 }
