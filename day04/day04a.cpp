@@ -7,5 +7,8 @@
 
 int main(){
 	vector<Passport*>* input = GetInput();
-	
+	for(auto passport: *input){
+		
+		
+	}
 }

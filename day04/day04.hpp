@@ -14,7 +14,7 @@ class Passport{
 	bool valid_;
 	
 	public:
-	map<string*, string*>* data_;
+	map<string*, string*>* data_;  //(currently) needs to be public for unit testing
 	
 	
 	Passport(){
@@ -27,12 +27,12 @@ class Passport{
 	}
 	
 	//Get the passport entry if it's defined. Returns null otherwise
-	string* Get_Field(string* field){
+	string* GetField(string* field){
 		try{
 			return data_->at(field);
 		}
 		catch (std::out_of_range& oor){  //Not present in passport
-			return NULL;	
+			return new string("UH OH! Stinky.");	
 		}
 	}
 	
@@ -40,6 +40,22 @@ class Passport{
 		return valid_;
 	}
 	
+	//Checks if a passport has all required fields. If not, invalidates the passport.
+	//If so, does not invalidate (but does not revalidate if invalidated)
+	//Returns the result of the check
+	bool UpdateFieldValidity(){
+		vector<string> required_fields = {"byr", "iyr", "eyr", "hgt", "hcl", "ecl", "pid"};
+		string* cur_field = NULL;
+		for(int i = 0; i < 7; i++){
+			cur_field = &required_fields[i];
+			cout << *cur_field << endl;
+			if(GetField(cur_field) == NULL){  //Not defined (or empty. Both are equally bad)
+				valid_ = false;
+				return false;
+			}
+		}
+		return true;
+	}
 	
 };
 

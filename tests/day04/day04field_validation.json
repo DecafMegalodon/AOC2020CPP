@@ -1,0 +1,20 @@
+{
+  "testFamilyName": "AOC 2020 Day 04 field validation",
+  "compilationFiles": [
+    "./tests/testcode/day04/day04fields.cpp",
+    "./day04/day04.cpp"
+  ],
+  "tests": [
+	{
+		"testIdentifier": "Day 04 field validation",
+		"testInputType": "file",
+		"testInput": "./tests/inputs/day04simple1.txt",
+		"testOutputType": "simple",
+		"testOutput": "2",
+		"testLevel": 2
+	}
+  ],
+  "test_targets": [
+    "day04"
+  ]
+}
