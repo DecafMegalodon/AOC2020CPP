@@ -11,17 +11,19 @@
 using namespace std;
 
 class Passport{
-	map<string*, string*>* data_;
 	bool valid_;
 	
 	public:
+	map<string*, string*>* data_;
+	
+	
 	Passport(){
 		data_ = new map<string*, string*>;
 		valid_ = true;  //Default to true, and add tests to show otherwise
 	}
 	
 	void Append(string* key, string* data){
-		data_->at(key) = data;  //Todo: Check for duplicate keys?
+		data_->emplace(key, data);  //Todo: Check for duplicate keys?
 	}
 	
 	//Get the passport entry if it's defined. Returns null otherwise
@@ -37,6 +39,8 @@ class Passport{
 	bool GetValid(){
 		return valid_;
 	}
+	
+	
 };
 
 vector<Passport*>* GetInput();
